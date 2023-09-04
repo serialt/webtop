@@ -6,7 +6,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 
 RUN apk add --no-cache sudo git xfce4 faenza-icon-theme bash python3 tigervnc xfce4-terminal  wqy-zenhei firefox  wget novnc websockify \
     && adduser -h /home/alpine -s /bin/bash -S -D alpine && echo -e "alpine\nalpine" | passwd alpine \
-    && echo 'alpine ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
+    && echo 'alpine ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers 
     
 RUN  echo -en "\nexport LC_ALL=zh_CN.UTF-8\nexport LANG=zh_CN.UTF-8\nexport LANGUAGE=zh_CN:zh" >> /etc/profile
 
